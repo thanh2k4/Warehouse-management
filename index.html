@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy New Year</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <style>
-        body {
+               body {
             margin: 0;
             overflow: hidden;
         }
@@ -57,7 +56,7 @@
     z-index: 1;
     position: relative;
 }
-img {
+.img {
     width: 300px;
     filter: drop-shadow(0px 0px 10px rgb(238, 255, 0));
 }
@@ -82,7 +81,7 @@ img {
 .right{
     right:0;
 }
-.bg img{
+.bg .img{
     width: 100%;
 }
 .content{
@@ -96,7 +95,7 @@ img {
     font-size: 28px;
     padding:  40px;
 }
-.content > img{
+.content > .img{
     position: absolute;
     top: 0;
     left: 0;
@@ -104,7 +103,7 @@ img {
     width: 400px;
     height: 600px;
 }
-div{
+.div{
     animation: zoomInOut 1s ease-in-out;
 }
 
@@ -160,40 +159,295 @@ div{
         margin-top: 0vh;
     }
 }
+
+
+
+.cycle{
+            width: 60vh;
+            height: 60vh;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            border: 5px yellow solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            
+        }
+        .quay{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            border: 2px yellow solid;
+            font-size: 20px;
+            color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .fan {
+      width: 100%;
+      height: 100%;
+      background: conic-gradient(#ff0000 0deg, #ff0000 57deg, transparent 60deg);
+      border-radius: 50%;
+      border:1px yellow solid ;
+      position: absolute;
+    }
+    .rota1{
+        transform: rotate(0deg);
+    }
+    .rota2{
+        transform: rotate(60deg);
+    }
+    .rota3{
+        transform: rotate(120deg);
+    }
+    .rota4{
+        transform: rotate(180deg);
+    }
+    .rota5{
+        transform: rotate(240deg);
+    }
+    .rota6{
+        transform: rotate(300deg);
+    }
+    .fan > *{
+        margin-left: 53%;
+        margin-top: 13%;
+        width: 27%;
+    }
+    .chucTet{
+        width: 80%;
+        height: 40vh;
+        background-color: white;
+        border-left: 10px red solid;
+        border-right: 10px red solid;
+        box-shadow: 0 0 5px yellow;
+        position: absolute;
+        z-index: 11;
+        padding: 10px;
+        animation: chucTet 1s ease-in-out;
+        display: none;
+        font-family: "Sofia", sans-serif;
+        font-size: 25px;
+    }
+    .chucTet img{
+        width: 20vh;
+        display: inline;
+    }
+    .small{
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        bottom: 10px;
+        right: 10px;
+    }
+    .dele{
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 5px black;
+    }
+    @keyframes chucTet {
+        0%{
+width: 0;
+        }
+        100%{
+width: calc(80vh + 20px);
+        }
+    }
+    .randCyc{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+        display: none;
+    }
+    .Avata{
+        position: absolute;
+        
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        
+        background-size: 100%;
+        z-index: 20;
+    }
+    .RandCyc{
+        bottom: 20px;
+        background-image: url('https://i.pinimg.com/736x/f9/4f/ab/f94faba3ff5d57648b224d7111514f59.jpg');
+        animation: inputs1 1s ease-in-out;
+        display: none;
+    }
+    .boitoan{
+        bottom: calc(30px + 50px);
+        background-image: url('https://i.pinimg.com/736x/b1/3a/93/b13a935f98faa2321dad272163a8c771.jpg');
+        animation: inputs2 1s ease-in-out;
+        display: none;
+    }
+    @keyframes inputs1 {
+        0% {
+        width: 40vh;
+        height: 40vh;
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 10px;
+        transform: translate(0, 0);
+      }
+    }
+    @keyframes inputs2 {
+        0% {
+        width: 40vh;
+        height: 40vh;
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        bottom: calc(30px + 50px);
+        right: 10px;
+        transform: translate(0, 0);
+      }
+    }
+    .Boitoan{
+        border-radius: 10px;
+        border: 1px white solid;
+        box-shadow:  0 0 5px yellow;
+        background-color: #009e00;
+        position: absolute;
+        display: none;
+    }
+    .BContent{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .boi{
+        display: flex;
+        gap: 10px;
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .boi > div{
+        width: 15vh;
+        height: 15vh;
+        background-color: black;
+        border: 3px yellow solid;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .boi > div > img {
+        width: 100%;
+        height: 100%;
+    }
+    .BContent > a{
+        text-decoration: none;
+        color: white;
+    }
     </style>
 </head>
 <body>
     <canvas id="fireworksCanvas"></canvas>
-    <div class="clickme">
+    <div class="clickme div">
         CLick Me
     </div>
-    <div class="point">
+    <div class="point div">
         
     </div>
-    <div class="thiep">
-        <div class="top left bg">
-            <img src="https://www.dropbox.com/scl/fi/r7rm7f8qpa8xloboulgmo/Download_premium_png_of_PNG_Elegant_cherry_blossom_branch_illustration__transparent_background_by_Chalr_about_flowers__cherry_blossom__art__design__and_spring_15288913-removebg-preview.png?rlkey=5th6oglaixso4xz7ribplje1e&st=xekrncve&dl=1" alt="">
+    <div class="thiep div">
+        <div class="top left bg div">
+            <img class='img' src="https://www.dropbox.com/scl/fi/r7rm7f8qpa8xloboulgmo/Download_premium_png_of_PNG_Elegant_cherry_blossom_branch_illustration__transparent_background_by_Chalr_about_flowers__cherry_blossom__art__design__and_spring_15288913-removebg-preview.png?rlkey=5th6oglaixso4xz7ribplje1e&st=xekrncve&dl=1" alt="">
         </div>
-        <div class="center left bg">
-            <img src="https://www.dropbox.com/scl/fi/r7rm7f8qpa8xloboulgmo/Download_premium_png_of_PNG_Elegant_cherry_blossom_branch_illustration__transparent_background_by_Chalr_about_flowers__cherry_blossom__art__design__and_spring_15288913-removebg-preview.png?rlkey=5th6oglaixso4xz7ribplje1e&st=xekrncve&dl=1" alt="">
+        <div class="center left bg div">
+            <img class='img' src="https://www.dropbox.com/scl/fi/r7rm7f8qpa8xloboulgmo/Download_premium_png_of_PNG_Elegant_cherry_blossom_branch_illustration__transparent_background_by_Chalr_about_flowers__cherry_blossom__art__design__and_spring_15288913-removebg-preview.png?rlkey=5th6oglaixso4xz7ribplje1e&st=xekrncve&dl=1" alt="">
         </div>
-        <div class="top right bg">
-            <img src="https://www.dropbox.com/scl/fi/48hvrptad36fo3hm2lc00/Download_premium_png_of_PNG_Blossom_flower_plant_inflorescence_by_Aew_about_png__flower__plant__aesthetic__and_tree_12084382-removebg-preview.png?rlkey=h13v1uzgska7ig7miaimrvkjv&st=t4evoezq&dl=1" alt="">
+        <div class="top right bg div">
+            <img class='img' src="https://www.dropbox.com/scl/fi/48hvrptad36fo3hm2lc00/Download_premium_png_of_PNG_Blossom_flower_plant_inflorescence_by_Aew_about_png__flower__plant__aesthetic__and_tree_12084382-removebg-preview.png?rlkey=h13v1uzgska7ig7miaimrvkjv&st=t4evoezq&dl=1" alt="">
         </div>
-        <div class="center right bg">
-            <img src="https://www.dropbox.com/scl/fi/48hvrptad36fo3hm2lc00/Download_premium_png_of_PNG_Blossom_flower_plant_inflorescence_by_Aew_about_png__flower__plant__aesthetic__and_tree_12084382-removebg-preview.png?rlkey=h13v1uzgska7ig7miaimrvkjv&st=t4evoezq&dl=1" alt="">
+        <div class="center right bg div">
+            <img class='img' src="https://www.dropbox.com/scl/fi/48hvrptad36fo3hm2lc00/Download_premium_png_of_PNG_Blossom_flower_plant_inflorescence_by_Aew_about_png__flower__plant__aesthetic__and_tree_12084382-removebg-preview.png?rlkey=h13v1uzgska7ig7miaimrvkjv&st=t4evoezq&dl=1" alt="">
         </div>
-        <div class="content hpny">
-            <img src="https://www.dropbox.com/scl/fi/v35hngtu8ntiaj9ruflr5/Red-Background-Chinese-Style-Border-Print-Ad-Wallpaper-Image-For-Free-Download-Pngtree.jpg?rlkey=kp58wojx7kj04x47u6nljw08f&st=6whhkq3f&dl=1" alt="">
-            <div class="inContent">
+        <div class="content hpny div">
+            <img class='img' src="https://www.dropbox.com/scl/fi/v35hngtu8ntiaj9ruflr5/Red-Background-Chinese-Style-Border-Print-Ad-Wallpaper-Image-For-Free-Download-Pngtree.jpg?rlkey=kp58wojx7kj04x47u6nljw08f&st=6whhkq3f&dl=1" alt="">
+            <div class="inContent div">
                 Năm mới chúc bạn vạn sự như ý, công việc thăng tiến, tình duyên viên mãn, tiền bạc rủng rỉnh nhé!
             </div>
         </div>
-        <img class="avata" src="" alt="">
+        <img class='img avata' src="" alt="">
+    </div>
+    <div class="Avata RandCyc">
+
+    </div>
+    <div class="Avata boitoan">
+
+    </div>
+    <div class="randCyc">
+        <div class="dele">
+            <b>X</b>
+        </div>
+    <div class="cycle">
+        <div class="quay">
+            Quay
+        </div>
+        <div class="fan rota1"><img src="https://www.dropbox.com/scl/fi/2cvpdiwztvlwwbnz4hd9s/effa064b63c095dab3c1e2cb26f0fd40-removebg-preview.png?rlkey=r061bdrsmw1zjrtv8duvfgeby&st=nghimdp4&dl=1" alt=""></div>
+        <div class="fan rota2"><img src="https://www.dropbox.com/scl/fi/x6wwtony4mrfsx8zy97pm/939521c9cf27dc0a017bbc6a453c1c4e-removebg-preview.png?rlkey=go3b8psocf2zpldug3srkyvqs&st=1z7nvuoq&dl=1" alt=""></div>
+        <div class="fan rota3"><img src="https://www.dropbox.com/scl/fi/rhy23tdlm7j7d2g9afl41/81369cb8ebbbe7a96605efbbc1e99006-removebg-preview.png?rlkey=lqcanujcvlpiqparznaap25h0&st=xb44n8lz&dl=1" alt=""></div>
+        <div class="fan rota4"><img src="https://www.dropbox.com/scl/fi/3gq7mf75qrx9bzh1dok1l/14e0b63b3ab2f4dec54223215515f13f-removebg-preview.png?rlkey=mwoojwmd1phjq9tmsdy40bpvq&st=s5br7nfi&dl=1" alt=""></div>
+        <div class="fan rota5"><img src="https://www.dropbox.com/scl/fi/xqzg0ep60uqjozd4bd7qu/8e0e5d78fb731e12183062c31f383304-removebg-preview.png?rlkey=zo6rlv5p8dcjeyoyrutk1whf0&st=5tnuvcpo&dl=1" alt=""></div>
+        <div class="fan rota6"><img src="https://www.dropbox.com/scl/fi/dreporbzgl5s0t03v01uh/f03c6d0bd32c465caf05e90361a5e3e4-removebg-preview.png?rlkey=lbn62v4o3ymz23ur903ngedx0&st=37zpo3y7&dl=1" alt=""></div>
+    </div>
+    <div class="chucTet">
+        <div class="Content"></div>
+        <div class="dele">
+            <b>X</b>
+        </div>
+    </div>
+    </div>
+    <div class="Boitoan">
+        <div class="dele">
+            <b>X</b>
+        </div>
+        <div class="BContent">
+            <a href="https://chat.openai.com/?prompt=bói đầu năm"><div class="boi daunam"><div><img src="https://i.pinimg.com/736x/3c/b8/91/3cb8915743f5b18145e08ff832e1cea1.jpg" alt=""></div><b>bói đầu năm</b></div></a>
+            <a href="https://chat.openai.com/?prompt=xem tử vi đầu năm"><div class="boi tuvi"><div><img src="https://i.pinimg.com/736x/ef/be/30/efbe30e5f4da1fe8a154a992656ac3db.jpg" alt=""></div><b>xem tử vi đầu năm</b></div></a>
+            <a href="https://chat.openai.com/?prompt=xem tuổi xông đất"><div class="boi xongdat"><div><img src="https://i.pinimg.com/736x/3a/49/f6/3a49f61569259031067c1569031ac50a.jpg" alt=""></div><b>xem tuổi xông đất</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói chữ"><div class="boi chu"><div><img src="https://i.pinimg.com/736x/38/04/0e/38040ecaa0b533d629fafcc2a8c54c14.jpg" alt=""></div><b>bói chữ</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói bài tây"><div class="boi boibai"><div><img src="https://i.pinimg.com/736x/8e/ad/1f/8ead1ff009fb9c077630e79ea568c446.jpg" alt=""></div><b>bói bài tây</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói phong thủy"><div class="boi phongthuy"><div><img src="https://i.pinimg.com/736x/40/4b/8d/404b8d892c8505b8440ae95b4ba250b5.jpg" alt=""></div><b>Xem phong thủy năm mới</b></div></a>
+            <a href="https://chat.openai.com/?prompt=xem ngày tốt xấu và hướng xuất phát"><div class="boi xemngay"><div><img src="https://i.pinimg.com/736x/f1/5b/59/f15b5924e912372af30f64625b7c2bfc.jpg" alt=""></div><b>Xem ngày tốt/xấu và hướng xuất hành</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói giấc mơ đầu năm"><div class="boi boimo"><div><img src="https://i.pinimg.com/736x/9d/c8/07/9dc807dc5776c9bacc48a6e6d373d884.jpg" alt=""></div><b>Bói giấc mơ đầu năm</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói chỉ tay"><div class="boi chitay"><div><img src="https://i.pinimg.com/736x/d3/80/c7/d380c7b016fd876e41c70583e90f74eb.jpg" alt=""></div><b>Xem chỉ tay</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói kiều"><div class="boi kieu"><div><img src="https://i.pinimg.com/736x/18/fb/3f/18fb3f583861b062595bb9df4fc94e2b.jpg" alt=""></div><b>Bói Kiều</b></div></a>
+            <a href="https://chat.openai.com/?prompt=bói nốt ruồi"><div class="boi notruoi"><div><img src="https://i.pinimg.com/736x/19/c5/13/19c513370771542f594b76e2d5ea2f84.jpg" alt=""></div><b>Bói nốt ruồi hoặc tướng mặt</b></div></a>
+            <a href="https://chat.openai.com/?prompt=Xem bói bằng tiền xu hoặc đồng xu may mắn"><div class="boi tuong"><div><img src="https://i.pinimg.com/236x/79/73/33/7973332444cf68accc7472609bccc604.jpg" alt=""></div><b>Xem bói bằng tiền xu hoặc đồng xu may mắn
+            </b></div></a>
+            
+        </div>
     </div>
 </body>
 <script>
-    
+// Lấy phần tử .content
+
 const canvas = document.getElementById('fireworksCanvas');
 const ctx = canvas.getContext('2d');
 var pic=['https://www.dropbox.com/scl/fi/xslf6z89pcm1wckex5kfa/avatar_2025_c-ng_b-_t-_t-i_l-c_may_m-n-removebg-preview.png?rlkey=uybqow6tovsss42zcqo7hn99g&st=k5rdtwp1&dl=1',
@@ -320,12 +574,19 @@ document.querySelector('.clickme').addEventListener("click",e=>{
         document.querySelector('.hpny').style.display = 'flex'
     }, 3500);
     setTimeout(() => {
-        document.querySelector('.hpny').style.display = 'none'
+       hideDiv(document.querySelector('.hpny'))
         document.querySelector('.thiep').style.display = 'flex'
-    }, 6500);
+          }, 6500);
     setTimeout(() => {
         start()
     }, 2100);
+    setTimeout(() => {
+
+document.querySelector('.RandCyc').style.display = 'block'
+  }, 9500);
+  setTimeout(() => {
+document.querySelector('.boitoan').style.display = 'block'
+  }, 11000);
 })
 
 function animate() {
@@ -339,6 +600,70 @@ function animate() {
 }
 
 animate();
+function hideDiv(div) {
+div.style.display = 'none';
 
+}
+
+var chucRand = ['<img src="https://www.dropbox.com/scl/fi/2cvpdiwztvlwwbnz4hd9s/effa064b63c095dab3c1e2cb26f0fd40-removebg-preview.png?rlkey=r061bdrsmw1zjrtv8duvfgeby&st=nghimdp4&dl=1" alt="">Chúc năm mới bạn có thêm chiếc xe mơ ước, lăn bánh mọi nẻo đường an toàn, mang về thật nhiều niềm vui và hạnh phúc!',
+    '<img src="https://www.dropbox.com/scl/fi/x6wwtony4mrfsx8zy97pm/939521c9cf27dc0a017bbc6a453c1c4e-removebg-preview.png?rlkey=go3b8psocf2zpldug3srkyvqs&st=1z7nvuoq&dl=1" alt="">Chúc năm mới tình yêu thêm đong đầy, gia đình hạnh phúc, người yêu thương luôn bên cạnh, trọn vẹn nghĩa tình!',
+    '<img src="https://www.dropbox.com/scl/fi/rhy23tdlm7j7d2g9afl41/81369cb8ebbbe7a96605efbbc1e99006-removebg-preview.png?rlkey=lqcanujcvlpiqparznaap25h0&st=xb44n8lz&dl=1" alt="">Chúc bạn một năm đạt được những thành tích rực rỡ, công việc thuận buồm xuôi gió, thăng tiến không ngừng và thành công vang dội!',
+    '<img src="https://www.dropbox.com/scl/fi/3gq7mf75qrx9bzh1dok1l/14e0b63b3ab2f4dec54223215515f13f-removebg-preview.png?rlkey=mwoojwmd1phjq9tmsdy40bpvq&st=s5br7nfi&dl=1" alt="">Chúc Tết này tiền vào như nước, tài lộc đầy nhà, vàng bạc rủng rỉnh, làm ăn phát đạt, sung túc cả năm!',
+    '<img src="https://www.dropbox.com/scl/fi/xqzg0ep60uqjozd4bd7qu/8e0e5d78fb731e12183062c31f383304-removebg-preview.png?rlkey=zo6rlv5p8dcjeyoyrutk1whf0&st=5tnuvcpo&dl=1" alt="">Chúc bạn một năm Tết an lành, may mắn đến từng phút giây, vạn sự như ý, mọi điều tốt đẹp đều ở lại bên bạn!'
+    ,'<img src="https://www.dropbox.com/scl/fi/dreporbzgl5s0t03v01uh/f03c6d0bd32c465caf05e90361a5e3e4-removebg-preview.png?rlkey=lbn62v4o3ymz23ur903ngedx0&st=37zpo3y7&dl=1" alt="">Chúc bạn và gia đình năm mới dồi dào sức khỏe, tinh thần minh mẫn, luôn tràn đầy năng lượng để tận hưởng cuộc sống!'
+]
+    const wheel = document.querySelector('.cycle');
+        const spinButton = document.querySelector('.quay');
+        let currentAngle = 0;
+
+        spinButton.addEventListener('click', () => {
+            const kq = Math.floor(rand(0,6)) * 60
+            const randomSpin = Math.floor(rand(10,12)) * 360 + kq // Random angle + 5 full spins
+            var i = 0
+                var val = setInterval(() => {
+                    i+=1
+                    wheel.style.transform = `rotate(${i}deg)`;
+                    if(i>randomSpin){
+                        clearInterval(val);
+                        setTimeout(() => {
+                    document.querySelector(".Content").innerHTML+=chucRand[kq/60]
+                    document.querySelector(".chucTet").style.display = 'block'    
+                },2000);
+                    } 
+                }, 1);     
+        });
+        if(document.querySelector(".chucTet .dele")){
+            document.querySelector(".chucTet .dele").addEventListener("click",()=>{
+                document.querySelector(".chucTet").style.display = 'none'
+            })
+        }
+        if(document.querySelector(".randCyc .dele")){
+            document.querySelector(".randCyc .dele").addEventListener("click",()=>{
+                document.querySelector(".randCyc").style.display = 'none'
+        
+            })
+        }
+        if(document.querySelector(".Avata.RandCyc")){
+            document.querySelector(".Avata.RandCyc").addEventListener("click",()=>{
+                document.querySelector(".randCyc").style.display = 'flex'
+                document.querySelector(".Boitoan").style.display = 'none'
+                
+            })
+        }
+
+        if(document.querySelector(".Boitoan .dele")){
+            document.querySelector(".Boitoan .dele").addEventListener("click",()=>{
+                document.querySelector(".Boitoan").style.display = 'none'
+            })
+              
+        }
+        if(document.querySelector(".Avata.boitoan")){
+            document.querySelector(".Avata.boitoan").addEventListener("click",()=>{
+                document.querySelector(".randCyc").style.display = 'none'
+                document.querySelector(".Boitoan").style.display = 'block'
+          
+            })
+        }
+       
 </script>
 </html>
