@@ -1,0 +1,12 @@
+UC Quản lý hàng hóa
+    - Actor
+        + Nhân viên kho: Quản lý hàng hóa
+        + Thủ kho: Quản lý hoạt động nhân viên kho
+        + Kế toán: Quản lý các chi phí trong kho
+    - Use Case:
+        + Nhân viên kho thực hiện quản lý thông tin hàng hóa,
+            bao gồm cập nhật, kiểm tra, xóa, và theo dõi lịch sử thay đổi
+        + Thủ kho quản lý nhân sự kho và yêu cầu kiểm kê kho.
+        + Nhân viên kho tạo biên bản kiểm kê
+        + Kế toán quản lý các giao dịch đối với hàng hóa, cùng với
+            báo cáo tài chính và các chi phí khác trong kho hàng
